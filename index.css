@@ -3,50 +3,50 @@
 html {
     /* Theme 1 */
     /* Background */
-    --main-background: hsl(222, 26%, 31%);
-    --toggle-keypad-background: hsl(223, 31%, 20%);
-    --screen-background: hsl(224, 36%, 15%);
+    --main-background-1: hsl(222, 26%, 31%);
+    --toggle-keypad-background-1: hsl(223, 31%, 20%);
+    --screen-background-1: hsl(224, 36%, 15%);
     /* Keys */
-    --key-background: hsl(225, 21%, 49%);
-    --key-shadow: hsl(224, 28%, 35%);
-    --key-background-toggle: hsl(6, 63%, 50%);
-    --key-shadow-toggle: hsl(6, 70%, 34%);
-    --key-background2: hsl(30, 25%, 89%);
-    --key-shadow2: hsl(28, 16%, 65%);
+    --key-background-1: hsl(225, 21%, 49%);
+    --key-shadow-1: hsl(224, 28%, 35%);
+    --key-background-toggle-1: hsl(6, 63%, 50%);
+    --key-shadow-toggle-1: hsl(6, 70%, 34%);
+    --key-background-1: hsl(30, 25%, 89%);
+    --key-shadow-1: hsl(28, 16%, 65%);
     /* Text */
-    --dark-text: hsl(221, 14%, 31%);
-    --white-text: hsl(0, 0, 100%);
+    --dark-text-1: hsl(221, 14%, 31%);
+    --white-text-1: hsl(0, 0, 100%);
     /* Theme 2 */
     /* Background */
-    --main-background: hsl(0, 0%, 90%);
-    --toggle-keypad-background: hsl(0, 5%, 81%);
-    --screen-background: hsl(0, 0%, 93%);
+    --main-background-2: hsl(0, 0%, 90%);
+    --toggle-keypad-background-2: hsl(0, 5%, 81%);
+    --screen-background-2: hsl(0, 0%, 93%);
     /* Keys */
-    --key-background: hsl(185, 42%, 37%);
-    --key-shadow: hsl(185, 58%, 25%);
-    --key-background-toggle: hsl(25, 98%, 40%);
-    --key-shadow-toggle: hsl(25, 99%, 27%);
-    --key-background2: hsl(45, 7%, 89%);
-    --key-shadow2: hsl(35, 11%, 61%);
+    --key-background-2: hsl(185, 42%, 37%);
+    --key-shadow-2: hsl(185, 58%, 25%);
+    --key-background-toggle-2: hsl(25, 98%, 40%);
+    --key-shadow-toggle-2: hsl(25, 99%, 27%);
+    --key-background-2: hsl(45, 7%, 89%);
+    --key-shadow-2: hsl(35, 11%, 61%);
     /* Text */
-    --dark-text: hsl(60, 10%, 19%);
-    --white-text: hsl(0, 0, 100%);
+    --dark-text-2: hsl(60, 10%, 19%);
+    --white-text-2: hsl(0, 0, 100%);
     /* Theme 3 */
     /* Background */
-    --main-background: hsl(268, 75%, 9%);
-    --toggle-keypad-background: hsl(268, 71%, 12%);
-    --screen-background: hsl(268, 71%, 12%);
+    --main-background-3: hsl(268, 75%, 9%);
+    --toggle-keypad-background-3: hsl(268, 71%, 12%);
+    --screen-background-3: hsl(268, 71%, 12%);
     /* Keys */
-    --key-background: hsl(281, 89%, 26%);
-    --key-shadow: hsl(285, 91%, 52%);
-    --key-background-toggle: hsl(176, 100%, 44%);
-    --key-shadow-toggle: hsl(177, 92%, 70%);
-    --key-background2: hsl(268, 47%, 21%);
-    --key-shadow2: hsl(290, 70%, 36%);
+    --key-background-3: hsl(281, 89%, 26%);
+    --key-shadow-3: hsl(285, 91%, 52%);
+    --key-background-toggle-3: hsl(176, 100%, 44%);
+    --key-shadow-toggle-3: hsl(177, 92%, 70%);
+    --key-background-3: hsl(268, 47%, 21%);
+    --key-shadow-3: hsl(290, 70%, 36%);
     /* Text */
-    --yellow-text: hsl(52, 100%, 62%);
-    --dark-text: hsl(198, 20%, 13%);
-    --white-text: hsl(0, 0, 100%);
+    --yellow-text-3: hsl(52, 100%, 62%);
+    --dark-text-3: hsl(198, 20%, 13%);
+    --white-text-3: hsl(0, 0, 100%);
 }
 
 * {
@@ -56,8 +56,8 @@ html {
 }
 
 body {
-    background-color: var(--main-background);
-    color: var(--white-text);
+    background-color: var(--main-background-1);
+    color: var(--white-text1);
     font-family: 'Spartan', sans-serif;
     display: flex;
     flex-direction: column;
@@ -66,6 +66,93 @@ body {
     min-height: 100vh;
     gap: 1rem;
 }
+/* general button styling */
+button {
+    font-size: 1.25rem;
+    transition: all 400ms ease-in-out;
+}
+
+button:not(.switch-btn) {
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1.1rem 0.25rem;
+}
+
+button:hover,
+.result-screen:hover {
+    outline: 2px dashed var(--key-shadow-2);
+    outline-offset: 5px;
+}
+
+.active {
+    outline: 2px dashed var(--key-shadow-toggle-2);
+    outline-offset: 5px;
+}
+/* header & theme switch */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: min(90%, 375px);
+    gap: 10rem;
+    transition: all 400ms ease-in-out;
+}
+
+.title {
+    font-size: 1.4rem;
+}
+
+.switch-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.theme {
+    font-size: .7rem;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    font-size: .7rem;
+}
+
+.numbers span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.switch-btn {
+    background-color: var(--toggle-keypad-background-1);
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 3.1rem;
+    height: 1.1rem;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.switch-btn span {
+    position: relative;
+    cursor: pointer;
+}
+
+.switch {
+    background-color: var(--key-background-toggle-1);
+    display: block;
+    position: absolute;
+    height: 90%;
+    width: 30%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+/* input buttons */
+
 
 .attribution {
     text-align: center;
