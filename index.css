@@ -184,7 +184,25 @@ button:hover,
     font-size: 1.25rem;
     letter-spacing: 2px;
 }
+/* result container */
+.result-container {
+    height: 5.3rem;
+    margin-bottom: 1rem;
+}
+  
+.result-screen {
+    background-color: var(--screen-background-1);
+    color: var(--white-text-1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 0rem 2rem;
+    font-size: 2rem;
+    border-radius: 10px;
+}
 /* input container */  
+
 
 .attribution {
     color: black;
