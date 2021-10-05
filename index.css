@@ -57,7 +57,7 @@ html {
 
 body {
     background-color: var(--main-background-1);
-    color: var(--white-text1);
+    color: white;
     font-family: 'Spartan', sans-serif;
     display: flex;
     flex-direction: column;
@@ -68,8 +68,8 @@ body {
 }
 /* general button styling */
 button {
-    font-size: 1.25rem;
-    transition: all 400ms ease-in-out;
+    font-size: 1.2rem;
+    transition: all 50ms ease-in-out;
 }
 
 button:not(.switch-btn) {
@@ -83,13 +83,11 @@ button:not(.switch-btn) {
 
 button:hover,
 .result-screen:hover {
-    outline: 2px dashed var(--key-shadow-2);
-    outline-offset: 5px;
+    outline: 2px solid var(--key-shadow-1);
 }
 
 .active {
-    outline: 2px dashed var(--key-shadow-toggle-2);
-    outline-offset: 5px;
+    outline: 2px solid var(--key-shadow-toggle-2);
 }
 /* header & theme switch */
 .container {
@@ -112,6 +110,7 @@ button:hover,
 }
 
 .theme {
+    height: .95rem;
     font-size: .7rem;
 }
 
@@ -122,7 +121,7 @@ button:hover,
 }
 
 .numbers span {
-    font-size: 1rem;
+    font-size: .6rem;
     font-weight: 700;
 }
 
@@ -132,8 +131,9 @@ button:hover,
     align-items: center;
     border: none;
     width: 3.1rem;
-    height: 1.1rem;
+    height: 1.2rem;
     padding: 5%;
+    margin-top: 4px;
     border-radius: 10px;
 }
 
@@ -152,12 +152,45 @@ button:hover,
     transition: all 0.3s ease-in-out;
 }
 /* input buttons */
+.number,
+.operator,
+.decimal {
+    background-color: var(--key-background-2);
+    color: var(--dark-text-1);
+    box-shadow: 0 4px 0 var(--key-shadow-2);
+    width: 70px;
+    height: 50px;
+}
 
+.del,
+.reset {
+    background-color: hsl(225, 21%, 49%);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 0 hsl(224, 28%, 35%);
+    height: 50px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.del {
+    width: 70px;
+}
+
+.equal {
+    background-color: var(--key-background-toggle-1);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 0 var(--key-shadow-toggle-1);
+    height: 50px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+/* input container */  
 
 .attribution {
+    color: black;
     text-align: center;
     font-size: 11px;
     }
     .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(5, 70%, 26%);
 }
