@@ -150,7 +150,13 @@ header {
     width: 30%;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-}
+    }
+    .slide-1 .switch {
+        left: 30%;
+    }
+    .slide-2 .switch {
+        left: 60%;
+    }
 /* input buttons */
 .number,
 .operator,
