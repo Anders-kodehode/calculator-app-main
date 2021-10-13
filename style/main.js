@@ -1,5 +1,4 @@
-let keypad = document.querySelector('.input-container')
-let result = document.querySelector('.result-screen')
+let calculator = document.querySelector('.calculator')
 
 let main = {
     displayValue: '0',
@@ -12,12 +11,12 @@ function updateDisplay() {
     let display = document.querySelector('.result-screen');
     display.value = main.displayValue;
 }
-  
+
 updateDisplay();
 
 let keys = document.querySelector('.input-container');
 keys.addEventListener('click', (event) => {
-let { target } = event;
+let target = event.target;
 
 if (!target.matches('button')) {
     return;
@@ -43,7 +42,6 @@ updateDisplay();
 });
 
 function inputDigit(digit) {
-    let { displayValue } = '.result-screen';
+    let { displayValue } = calculator;
     main.displayValue = displayValue === '0' ? digit : displayValue + digit;
 }
-  
