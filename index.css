@@ -206,6 +206,8 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    text-align: right;
+    max-width: 375px;
     height: 100%;
     padding: 0 1.8rem;
     font-size: 2rem;
@@ -260,13 +262,18 @@ header {
 @media (max-width: 400px) {
     header {
         justify-content: space-around;
-        width: max(80%, 300px);
-        gap: 8rem;
+        width: max(95%, 300px);
+        gap: 8.5rem;
     }
     button:not(.switch-btn),
     .result-screen,
     .input-container {
         border-radius: 5px;
+    }
+    .result-screen,
+    .input-container {
+        width: max(95%, 300px);
+        margin: auto;
     }
     .number,
     .operator,

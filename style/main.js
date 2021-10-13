@@ -38,5 +38,12 @@ if (target.classList.contains('reset')) {
     return;
 }
 
-console.log('digit', target.value);
+inputDigit(target.value);
+updateDisplay();
 });
+
+function inputDigit(digit) {
+    let { displayValue } = '.result-screen';
+    main.displayValue = displayValue === '0' ? digit : displayValue + digit;
+}
+  
