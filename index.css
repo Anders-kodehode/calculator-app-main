@@ -4,7 +4,7 @@ html {
     /* Theme 1 */
     /* Background */
     --main-background-1: hsl(222, 26%, 31%);
-    --toggle-keypad-background-1: hsl(223, 31%, 20%);
+    --keypad-background-1: hsl(223, 31%, 20%);
     --screen-background-1: hsl(224, 36%, 15%);
     /* Keys */
     --key-background-1: hsl(225, 21%, 49%);
@@ -16,10 +16,12 @@ html {
     /* Text */
     --dark-text-1: hsl(221, 14%, 31%);
     --white-text-1: hsl(0, 0, 100%);
+}
+html {
     /* Theme 2 */
     /* Background */
     --main-background-2: hsl(0, 0%, 90%);
-    --toggle-keypad-background-2: hsl(0, 5%, 81%);
+    --keypad-background-2: hsl(0, 5%, 81%);
     --screen-background-2: hsl(0, 0%, 93%);
     /* Keys */
     --key-background-2: hsl(185, 42%, 37%);
@@ -31,10 +33,12 @@ html {
     /* Text */
     --dark-text-2: hsl(60, 10%, 19%);
     --white-text-2: hsl(0, 0, 100%);
+}
+    html {
     /* Theme 3 */
     /* Background */
     --main-background-3: hsl(268, 75%, 9%);
-    --toggle-keypad-background-3: hsl(268, 71%, 12%);
+    --keypad-background-3: hsl(268, 71%, 12%);
     --screen-background-3: hsl(268, 71%, 12%);
     /* Keys */
     --key-background-3: hsl(281, 89%, 26%);
@@ -126,7 +130,7 @@ header {
 }
 
 .switch-btn {
-    background-color: var(--toggle-keypad-background-1);
+    background-color: var(--keypad-background-1);
     display: flex;
     align-items: center;
     border: none;
@@ -152,10 +156,10 @@ header {
     transition: all 0.3s ease-in-out;
     }
     .slide-1 .switch {
-        left: 30%;
+        left: 34%;
     }
     .slide-2 .switch {
-        left: 60%;
+        left: 68%;
     }
 /* input buttons */
 .number,
@@ -209,7 +213,7 @@ header {
 }
 /* input container */  
 .input-container {
-    background-color: var(--toggle-keypad-background-1);
+    background-color: var(--keypad-background-1);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 1.5rem;
@@ -230,6 +234,27 @@ header {
     }
     .attribution a {
         color: hsl(5, 70%, 26%);
+}
+
+/* js interaction */
+.light-mode {
+    background-color: var(--main-background-2);
+    color: var(--dark-text-2);
+  }
+  
+  .purple-mode-body {
+        background-color: var(--main-background-3);
+        color: var(--yellow-text-3);
+    }
+  
+  .purple-mode-key {
+        background-color: var(--keypad-background-3);
+        color: var(--white-text-3);
+    }
+  
+  .purple-mode-equal {
+        background-color: var(--key-background-toggle-3);
+        color: var(--dark-text-3);
 }
 
 @media (max-width: 400px) {
