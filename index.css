@@ -261,9 +261,11 @@ header {
 
 @media (max-width: 400px) {
     header {
-        justify-content: space-around;
-        width: max(95%, 300px auto);
-        gap: 8.5rem;
+        justify-content: space-between;
+        width: max(95%, 300px);
+        margin-left: auto;
+        margin-right: auto;
+        gap: 8rem;
     }
     button:not(.switch-btn),
     .result-screen,
