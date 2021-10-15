@@ -1,4 +1,5 @@
 let calculator = document.querySelector('.calculator')
+const resultContainer = document.querySelector('.result-container')
 
 let main = {
     displayValue: '0',
@@ -6,13 +7,6 @@ let main = {
     waitingForSecondOperand: false,
     operator: null,
 };
-
-function updateDisplay() {
-    let display = document.querySelector('.result-screen');
-    display.value = main.displayValue;
-}
-
-updateDisplay();
 
 let keys = document.querySelector('.input-container');
 keys.addEventListener('click', (event) => {
@@ -28,8 +22,9 @@ if (target.classList.contains('operator')) {
 }
 
 if (target.classList.contains('decimal')) {
-    console.log('decimal', target.value);
-    return;
+    inputDecimal(target.value);
+    updateDisplay();
+        return;
 }
 
 if (target.classList.contains('reset')) {
@@ -37,11 +32,32 @@ if (target.classList.contains('reset')) {
     return;
 }
 
+function updateDisplay() {
+    let display = document.querySelector('.result-screen');
+    display.value = main.displayValue;
+}
+
+updateDisplay();
+
 inputDigit(target.value);
 updateDisplay();
 });
 
+let num1 = 0
+
 function inputDigit(digit) {
-    let { displayValue } = calculator;
-    main.displayValue = displayValue === '0' ? digit : displayValue + digit;
+    if (num1 == 0) {
+        num1 = digit
+    } else {
+        num1 += digit
+    }
+    main.displayValue = num1
+}
+
+function inputDecimal(dot) {
+    console.log(calculator.displayValue)
+    console.log(dot)
+    if (calculator.displayValue.includes(dot)) {
+      calculator.displayValue += dot;
+    }
 }
