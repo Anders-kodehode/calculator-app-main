@@ -58,9 +58,9 @@ let purpleMode = () => {
 let toggleColorMode = () => {
     if (switchBtn.classList.contains('slide-1')) {
         lightMode()
-    } else if (switchBtn.classList.contains('slide-2')) {
+    }  if (switchBtn.classList.contains('slide-2')) {
         purpleMode()
-    } else if (!switchBtn.classList.contains('')) {
+    } if (!switchBtn.classList.contains('')) {
         blueMode()
     }
 }
