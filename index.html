@@ -6,11 +6,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
+  <script src="./style/theme.js" defer></script>
+  <script src="./style/main.js" defer></script>
   
   <title>Frontend Mentor | Calculator app</title>
 
 </head>
-<body>
+<body id="body">
 
   <header class="container">
     <p class="title">calc</p>
@@ -18,15 +20,17 @@
       <section>
         <p class="theme">THEME</p>
       </section>
-      <div class="slider">
+      <div class="content__theme">
         <div class="numbers">
           <span>1</span>
           <span>2</span>
           <span>3</span>
         </div>
-        <button class="switch-btn">
-          <span class="switch"></span>
-        </button>
+        <nav class="switch-btn">
+          <a href="#" class="content__theme__link" id="theme1">1</a>
+          <a href="#" class="content__theme__link" id="theme2">2</a>
+          <a href="#" class="content__theme__link" id="theme3">3</a>
+      </nav>
       </div>
     </div>
   </header>
@@ -63,7 +67,6 @@
     <p>Coded by
     <a href="https://github.com/Anders-kodehode">Anders Nyhammer.</a></p>
   </div>
-  <script src="./style/theme.js"></script>
-  <script src="./style/main.js"></script>
+
 </body>
 </html>
