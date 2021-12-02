@@ -46,11 +46,11 @@ html {
     --key-background-toggle-3: hsl(176, 100%, 44%);
     --key-shadow-toggle-3: hsl(177, 92%, 70%);
     --key-background-3: hsl(268, 47%, 21%);
-    --key-shadow-3: hsl(290, 70%, 36%);
+    --key-shadow-3: hsl(290, 72%, 27%);
     /* Text */
     --yellow-text-3: hsl(52, 100%, 62%);
     --dark-text-3: hsl(198, 20%, 13%);
-    --white-text-3: hsl(0, 0, 100%);
+    --white-text-3: rgb(231, 231, 231);
 }
 
 * {
@@ -177,7 +177,7 @@ body.theme3 .content__theme span {
     left: 2px;
     width: .8rem;
     height: .8rem;
-    background-color: var(--key-shadow-toggle-1);
+    background-color: var(--key-background-toggle-1);
     content: '';
     border-radius: 50%;
     border: 1px solid black;
@@ -268,6 +268,8 @@ body.theme3 .input-container {
     box-shadow: 0 4px 0 var(--key-shadow-2);
     width: 70px;
     height: 50px;
+    text-shadow: 0 1px 1px var(--key-shadow-1);
+    line-height: 0px;
 }
 
 .del,
@@ -277,7 +279,9 @@ body.theme3 .input-container {
     box-shadow: 0 4px 0 var(--key-shadow-del-1);
     height: 50px;
     font-size: 1.25rem;
+    text-shadow: 0 1px 0 var(--key-shadow-1);
     letter-spacing: 2px;
+    line-height: 0;
 }
 
 .del {
@@ -287,54 +291,83 @@ body.theme3 .input-container {
 .equal {
     background-color: var(--key-background-toggle-1);
     color: var(--white-text-1);
-    box-shadow: 0 3px 0 var(--key-shadow-toggle-1);
+    box-shadow: 0 4px 0 var(--key-shadow-toggle-1);
     height: 50px;
     font-size: 1.25rem;
     letter-spacing: 2px;
+    line-height: 0;
 }
 /* input buttons theme 2 */
 body.theme2 .equal {
     background-color: var(--key-background-toggle-2);
-    color: var(--white-text-1);
+    color: var(--white-text-2);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-toggle-2);
+    height: 53px;
 }
 
 body.theme2 .input-container.del {
     background-color: var(--key-background-del-2);
-    color: var(--white-text-1);
+    color: var(--white-text-2);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-del-2);
 }
 
 body.theme2 .input-container.reset {
     background-color: var(--key-background-2);
-    color: var(--white-text-1);
+    color: var(--white-text-2);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-del-2);
+}
+
+body.theme2 .attribution a {
+    color: var(--key-background-toggle-2);
 }
 /* input buttons theme 3 */
 body.theme3 .number {
     background-color: var(--key-background-3);
+    color: var(--yellow-text-3);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-3);
 }
+
+body.theme3 .operator {
+    background-color: var(--key-background-3);
+    color: var(--yellow-text-3);
+    box-shadow: inset 0px -9px 0px -5px var(--key-shadow-3);
+}
+
+body.theme3 .decimal {
+    background-color: var(--key-background-3);
+    color: var(--yellow-text-3);
+    box-shadow: inset 0px -9px 0px -5px var(--key-shadow-3);
+}
+
 body.theme3 .equal {
     background-color: var(--key-background-toggle-3);
     color: var(--dark-text-3);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-toggle-3);
+    height: 49px;
 }
 
 body.theme3 .del {
     background-color: var(--key-background-del-3);
-    color: var(--white-text-1);
+    color: var(--white-text-3);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-del-3);
 }
 
 body.theme3 .reset {
     background-color: var(--key-background-del-3);
-    color: var(--white-text-1);
+    color: var(--white-text-3);
     box-shadow: inset 0px -9px 0px -5px var(--key-shadow-del-3);
+}
+
+body.theme3 .attribution {
+    color: var(--yellow-text-3);
+}
+
+body.theme3 .attribution a {
+    color: var(--key-background-toggle-3);
 }
 /* footer */
 .attribution {
-    color: black;
+    color: var(--dark-text-3);
     text-align: center;
     font-size: 11px;
     }
